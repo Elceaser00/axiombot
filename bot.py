@@ -159,7 +159,7 @@ def should_sell(trade, pnl):
     if age >= TIMEOUT_MINUTES and abs(pnl) <= TIMEOUT_BAND:
         return True, f"TIMEOUT {age:.0f}min pnl={pnl:+.1%}"
     return False, None
-    def execute_buy(token_address):
+def execute_buy(token_address):
     if check_risk_guard() or token_address in open_trades:
         return
     if available_capital() < (trade_size_Y or 0):
